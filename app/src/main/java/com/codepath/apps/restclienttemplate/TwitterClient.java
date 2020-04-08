@@ -24,7 +24,7 @@ import com.github.scribejava.core.builder.api.BaseApi;
  */
 public class TwitterClient extends OAuthBaseClient {
 	public static final BaseApi REST_API_INSTANCE = TwitterApi.instance(); // Change this
-	public static final String REST_URL = "https://api.twiter.com/1.1"; // Change this, base API URL
+	public static final String REST_URL = "https://api.twitter.com/1.1"; // Change this, base API URL
 	public static final String REST_CONSUMER_KEY = "3BBezHCMb593hIRUqEnmidj0F";       // Change this inside apikey.properties
 	public static final String REST_CONSUMER_SECRET = "UD0WwzCbA4KzbAvg34lwBnHWfEWWQiFGdFwPNhyFrd9GTyePN2"; // Change this inside apikey.properties
 
