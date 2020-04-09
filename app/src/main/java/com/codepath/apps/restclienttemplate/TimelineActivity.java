@@ -35,8 +35,6 @@ public class TimelineActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeline);
 
-//<<<<<<< HEAD
-//=======
         swipeContainer = findViewById(R.id.swipeContainer);
         // Configure the refreshing colors
         swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
@@ -51,7 +49,6 @@ public class TimelineActivity extends AppCompatActivity {
             }
         });
 
-//>>>>>>> step6
         client = TwitterApp.getRestClient(this);
 
         // find the recycler view
