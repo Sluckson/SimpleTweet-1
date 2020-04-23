@@ -1,5 +1,10 @@
 package com.codepath.apps.restclienttemplate.models;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -7,11 +12,23 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Tweet {
 
-    public String body;
-    public String createdAt;
+    @ColumnInfo
+    @PrimaryKey
     public long id;
+
+    @ColumnInfo
+    public String body;
+
+    @ColumnInfo
+    public String createdAt;
+
+    @ColumnInfo
+    public long userId;
+
+    @Ignore
     public User user;
 
     public static Tweet fromJson(JSONObject jsonObject) throws JSONException {
@@ -19,7 +36,9 @@ public class Tweet {
          tweet.body = jsonObject.getString("text");
          tweet.createdAt = jsonObject.getString("created_at");
          tweet.id = jsonObject.getLong("id");
-         tweet.user = User.fromJson(jsonObject.getJSONObject("user"));
+         User user = User.fromJson(jsonObject.getJSONObject("user"));
+         tweet.user = user;
+         tweet.userId = user.id;
          return tweet;
     }
 
