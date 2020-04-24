@@ -14,6 +14,7 @@ public abstract class MyDatabase extends RoomDatabase {
     public abstract SampleModelDao sampleModelDao();
 
     public abstract TweetDao tweetDao();
+
     // Database name to be used
     public static final String NAME = "MyDataBase";
 }

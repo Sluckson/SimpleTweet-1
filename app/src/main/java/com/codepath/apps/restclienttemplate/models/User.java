@@ -37,7 +37,7 @@ public class User {
 
     public static List<User> fromJsonTweetArray(List<Tweet> tweetsFromNetwork) {
         List<User> users = new ArrayList<>();
-        for(int i = 0; i < users.size(); i++){
+        for(int i = 0; i < tweetsFromNetwork.size(); i++){
             users.add(tweetsFromNetwork.get(i).user);
         }
         return users;
