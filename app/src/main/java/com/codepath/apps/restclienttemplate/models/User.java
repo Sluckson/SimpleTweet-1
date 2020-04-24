@@ -6,10 +6,12 @@ import androidx.room.PrimaryKey;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Parcel
 @Entity
 public class User {
 
@@ -25,6 +27,9 @@ public class User {
 
     @ColumnInfo
     public String profileImageUrl;
+
+    // Empty constructer needed by Parceler library
+    public User() {}
 
     public static User fromJson(JSONObject jsonObject) throws JSONException {
      User user = new User();
