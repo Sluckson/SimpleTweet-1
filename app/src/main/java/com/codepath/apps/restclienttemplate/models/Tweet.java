@@ -26,6 +26,9 @@ public class Tweet {
     public String body;
 
     @ColumnInfo
+    public int likes;
+
+    @ColumnInfo
     public String createdAt;
 
     @ColumnInfo
@@ -45,6 +48,8 @@ public class Tweet {
          User user = User.fromJson(jsonObject.getJSONObject("user"));
          tweet.user = user;
          tweet.userId = user.id;
+
+         tweet.likes = jsonObject.getInt("favorite_count");
          return tweet;
     }
 

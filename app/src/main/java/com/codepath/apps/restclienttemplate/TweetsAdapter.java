@@ -65,18 +65,29 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         ImageView ivProfileImage;
         TextView tvScreenName;
         TextView tvBody;
+        TextView friend_count;
+        TextView like_count;
+        TextView follower_count;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ivProfileImage = itemView.findViewById(R.id.ivProfileImage);
             tvScreenName = itemView.findViewById(R.id.tvScreenName);
             tvBody = itemView.findViewById(R.id.tvBody);
+
+            friend_count = itemView.findViewById(R.id.friend_count);
+            follower_count = itemView.findViewById(R.id.follower_count);
+            like_count = itemView.findViewById(R.id.follower_count);
         }
 
         public void bind(Tweet tweet) {
             tvBody.setText(tweet.body);
             tvScreenName.setText(tweet.user.screenName);
             Glide.with(context).load(tweet.user.profileImageUrl).into(ivProfileImage);
+
+            friend_count.setText(tweet.user.freinds);
+            follower_count.setText(tweet.user.followers);
+            like_count.setText(tweet.likes);
 
         }
     }

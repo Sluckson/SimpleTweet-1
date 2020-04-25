@@ -2,6 +2,7 @@ package com.codepath.apps.restclienttemplate.models;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import org.json.JSONException;
@@ -28,6 +29,12 @@ public class User {
     @ColumnInfo
     public String profileImageUrl;
 
+    @Ignore
+    public int followers;
+
+    @Ignore
+    public int freinds;
+
     // Empty constructer needed by Parceler library
     public User() {}
 
@@ -37,6 +44,10 @@ public class User {
      user.name = jsonObject.getString("name");
      user.screenName = jsonObject.getString("screen_name");
      user.profileImageUrl = jsonObject.getString("profile_image_url_https");
+
+     user.followers = jsonObject.getInt("followers_count");
+     user.freinds = jsonObject.getInt("friends_count");
+
      return user;
     }
 
