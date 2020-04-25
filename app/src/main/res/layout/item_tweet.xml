@@ -6,26 +6,28 @@
     android:layout_height="wrap_content">
 
     <TextView
+        android:id="@+id/tvFollow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBody"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="15dp"
+        android:text="Followers"
+        android:textStyle="bold|italic" />
+
+    <TextView
         android:id="@+id/friend_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFollow2"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="182dp"
-        android:layout_marginTop="78dp"
+        android:layout_marginStart="189dp"
+        android:layout_marginTop="-4dp"
         android:text="TextView"
+        android:textStyle="bold|italic"
         tools:text="1234" />
-
-    <ImageView
-        android:id="@+id/friend"
-        android:layout_width="88dp"
-        android:layout_height="21dp"
-        android:layout_below="@+id/tvBody"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="127dp"
-        android:layout_marginTop="11dp"
-        app:srcCompat="@drawable/friend" />
 
     <ImageView
         android:id="@+id/ivProfileImage"
@@ -71,47 +73,52 @@
         android:layout_marginTop="15dp"
         android:background="?android:attr/listDivider" />
 
-    <ImageView
-        android:id="@+id/like"
-        android:layout_width="78dp"
-        android:layout_height="17dp"
-        android:layout_below="@+id/tvBody"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="15dp"
-        app:srcCompat="@drawable/like" />
-
-
-    <ImageView
-        android:id="@+id/follower"
-        android:layout_width="54dp"
-        android:layout_height="23dp"
-        android:layout_below="@+id/tvBody"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="128dp"
-        app:srcCompat="@drawable/follower" />
 
     <TextView
         android:id="@+id/like_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFollow"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="79dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="-4dp"
         android:text="TextView"
+        android:textStyle="bold|italic"
         tools:text="1234" />
 
     <TextView
         android:id="@+id/follower_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFollow3"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="271dp"
-        android:layout_marginTop="78dp"
+        android:layout_marginStart="293dp"
+        android:layout_marginTop="-4dp"
         android:text="TextView"
+        android:textStyle="bold|italic"
         tools:text="1234" />
+
+    <TextView
+        android:id="@+id/tvFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBody"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="15dp"
+        android:text="Followers"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/tvFollow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBody"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="15dp"
+        android:text="Followers"
+        android:textStyle="bold|italic" />
 
 </RelativeLayout>
